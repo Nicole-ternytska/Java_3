@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Lab3.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Lab3</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Lab3.java</span></div><h1>Lab3.java</h1><pre class="source lang-java linenums">import java.util.Iterator;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.ArrayList;
+
+
+<span class="nc" id="L7">public class Lab3 {</span>
+
+    public static &lt;T&gt; Iterable&lt;T&gt; filter(Iterable&lt;T&gt; iterable, Predicate&lt;? super T&gt; provision) {
+<span class="fc" id="L10">        ArrayList&lt;T&gt; result_list = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L11">        Iterator&lt;T&gt; iterator = iterable.iterator();</span>
+        T Value;
+<span class="fc bfc" id="L13" title="All 2 branches covered.">        while(iterator.hasNext()) {</span>
+<span class="fc" id="L14">            Value = iterator.next();</span>
+<span class="fc bfc" id="L15" title="All 2 branches covered.">            if(provision.test(Value))</span>
+<span class="fc" id="L16">                result_list.add(Value);</span>
+        }
+<span class="fc" id="L18">        return result_list;</span>
+    }
+    public static &lt;F, T&gt; Iterable&lt;T&gt; transform(Iterable&lt;F&gt; iterable, Function&lt;? super F, ? extends T&gt; function)
+    {
+<span class="fc" id="L22">        ArrayList&lt;T&gt; result_list = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L23">        Iterator&lt;F&gt; iterator = iterable.iterator();</span>
+        F Value;
+<span class="fc bfc" id="L25" title="All 2 branches covered.">        while(iterator.hasNext()){</span>
+<span class="fc" id="L26">            Value = iterator.next();</span>
+<span class="fc" id="L27">            result_list.add(function.apply(Value));</span>
+        }
+<span class="fc" id="L29">        return result_list;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

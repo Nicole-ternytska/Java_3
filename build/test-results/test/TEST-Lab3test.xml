@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Lab3test" tests="8" skipped="0" failures="0" errors="0" timestamp="2020-11-01T17:54:11" hostname="PAPILLON" time="0.02">
+  <properties/>
+  <testcase name="filter_str_Test" classname="Lab3test" time="0.007"/>
+  <testcase name="filter_bool_Test" classname="Lab3test" time="0.001"/>
+  <testcase name="transform_str_Test" classname="Lab3test" time="0.004"/>
+  <testcase name="transform_bool_Test" classname="Lab3test" time="0.001"/>
+  <testcase name="filter_int_Test" classname="Lab3test" time="0.001"/>
+  <testcase name="transform_float_Test" classname="Lab3test" time="0.0"/>
+  <testcase name="transform_int_Test" classname="Lab3test" time="0.001"/>
+  <testcase name="filter_float_Test" classname="Lab3test" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
